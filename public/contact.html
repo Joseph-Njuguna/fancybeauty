@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
 		
-		<title>Beauty Salon | Contact</title>
+		<title>Fancy Beauty Shop | Contact</title>
 		<!-- Loading third party fonts -->
 		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<link href="fonts/novecento-font/novecento-font.css" rel="stylesheet" type="text/css">
@@ -16,6 +16,13 @@
 		<script src="js/ie-support/html5.js"></script>
 		<script src="js/ie-support/respond.js"></script>
 		<![endif]-->
+		<style>
+			/* Set the size of the div element that contains the map */
+		   #map {
+			 height: 400px;  /* The height is 400 pixels */
+			 width: 240%;  /* The width is the width of the web page */
+			}
+		 </style>
 
 	</head>
 
@@ -27,10 +34,10 @@
 			<header class="site-header">
 				<div class="container">
 					<a id="branding" href="index.html">
-						<img src="images/logo.png" alt="Company name" class="logo">
+						<img src="images/logo.png" alt="Fancy Beauty Shop" class="logo">
 						<div class="logo-copy">
-							<h1 class="site-title">Company Name</h1>
-							<small class="site-description">Slogan goes here</small>
+							<h1 class="site-title">Fancy Beauty Shop</h1>
+							<small class="site-description">Quality products at awesome prices</small>
 						</div>
 					</a> <!-- #branding -->
 
@@ -41,7 +48,6 @@
 						<ul class="menu">
 							<li class="menu-item"><a href="index.html">Home</a></li>
 							<li class="menu-item"><a href="about.html">About</a></li>
-							<li class="menu-item"><a href="service.html">Services</a></li>
 							<li class="menu-item"><a href="gallery.html">Gallery</a></li>
 							<li class="menu-item current-menu-item"><a href="contact.html">Contact</a></li>
 						</ul> <!-- .menu -->
@@ -54,34 +60,59 @@
 			<main class="main-content">
 				<div class="page">
 					<div class="container">
-						<p>Omnis iste natus error sit voluptatem doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto Omnis iste natus error sit voluptatem doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto iste natus error sit voluptatem doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto</p>
+						<p>
+							CALL US NOW OR WHATSAPP ON 0790593729, 0739146178 <br> VISIT US <br>We are located at Floor 2 of Mitsumi plaza, along Moi Drive in Umoja, Nairobi.
+						</p>
+						<hr>
+						
+						<div class="row">	
+							<div class="col-md-6 col-md-offset-1">
+								<div class="map-container">
+									<div class="address-info">
+										<address>
+											<div id="map"></div>
+											<script>	// Initialize and add the map
+												function initMap() {
+													// The location of Uluru
+													var moidrive = {lat: -1.279934, lng: 36.895985};
+													// The map, centered at Uluru
+													var map = new google.maps.Map(
+														document.getElementById('map'), {zoom: 4, center: moidrive});
+													// The marker, positioned at Uluru
+													var marker = new google.maps.Marker({position: moidrive, map: map});
+												}
+												  </script>
+												  <!--Load the API from the specified URL
+												  * The async attribute allows the browser to render the page while the API loads
+												  * The key parameter will contain your own API key (which is not needed for this tutorial)
+												  * The callback parameter executes the initMap() function
+												  -->
+												  <script async defer
+												  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4OAP7Ub3DRt3L_ImH625vjtpinmUFFb0&callback=initMap">
+											</script>
 
+											<!-- <img src="images/icon-map-small.png" class="icon"> -->
+											<p><strong>Fancy Beauty Shop</strong> Moi Drive, Nairobi</p>
+										</address>
+										
+								</div>
+								<div class="contact-info">
+									<a href="mailto:contact@companyname.com" class="mail"><img src="images/icon-envelope-small.png" class="icon">contact@companyname.com</a>
+									<a href="tel:(254)790593729" class="phone"><img src="images/icon-phone-small.png" class="icon">(254)790593729</a>
+								</div>
+							</div>
+						</div>
 						<div class="row">
+							<p>Feel free to drop your message to our mail:</p>
 							<div class="col-md-5">
 								<form action="#" class="contact-form">
 									<input type="text" id="name" placeholder="Name...">
 									<input type="text" id="email" placeholder="Email...">
-									<input type="text" id="website" placeholder="Website...">
 									<textarea name="" id="message" placeholder="Message..."></textarea>
 									<div class="text-right">
 										<button class="button large" type="submit">Send Message</button>
 									</div>
 								</form>
-							</div>
-							<div class="col-md-6 col-md-offset-1">
-								<div class="map-container">
-									<div class="map"></div>
-									<div class="address-info">
-										<address>
-											<img src="images/icon-map-small.png" class="icon">
-											<p><strong>Company name</strong> 563 Avenue Street, New York</p>
-										</address>
-										<div class="contact-info">
-											<a href="mailto:contact@companyname.com" class="mail"><img src="images/icon-envelope-small.png" class="icon">contact@companyname.com</a>
-											<a href="tel:(500)942042259" class="phone"><img src="images/icon-phone-small.png" class="icon">(500)942042259</a>
-										</div>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -97,22 +128,20 @@
 								<div class="contact-info">
 									<address>
 										<img src="images/icon-map-small.png" class="icon">
-										<p><strong>Company name</strong> 563 Avenue Street, New York</p>
+										<p><strong>Fancy Beauty Shop</strong> Moi Drive, Nairobi</p>
 									</address>
 									<a href="mailto:contact@companyname.com" class="mail"><img src="images/icon-envelope-small.png" class="icon">contact@companyname.com</a>
-									<a href="tel:(500)942042259" class="phone"><img src="images/icon-phone-small.png" class="icon">(500)942042259</a>
+									<a href="tel:(254)790593729" class="phone"><img src="images/icon-phone-small.png" class="icon">(254)790593729</a>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="widget">
 								<h3 class="widget-title">Social Media</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident et praesentium </p>
+								<p>Hit us on our social media accounts </p>
 								<div class="social-links">
 									<a href="#"><i class="fa fa-facebook"></i></a>
 									<a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-google-plus"></i></a>
-									<a href="#"><i class="fa fa-pinterest"></i></a>
 								</div>
 							</div>
 						</div>
@@ -128,7 +157,7 @@
 					</div>
 
 					<div class="colophon">
-						<p>Copyright 2014 Company name. Designed by Themezy. All rights reserved.</p>
+						<p>Copyright 2020 Fancy Beauty Shop. Designed by JNdunguEnt. All rights reserved.</p>
 					</div>
 				</div>
 			</footer>
