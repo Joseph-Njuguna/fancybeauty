@@ -12,9 +12,9 @@
 
 		li{
 			margin-right: -100%;
-			width: 100%;
+			width: 80%;
 			float: left;
-			background-size: cover;
+			// background-size: cover;
 			min-height: 860px;
 			background-position: center center;
 			padding-top: 200px;
@@ -47,7 +47,7 @@
 			margin-bottom: 50px;
 
 			@media screen and (max-width:990px){
-				width: 100%;
+				width: 80%;
 			}
 		}
 	}
