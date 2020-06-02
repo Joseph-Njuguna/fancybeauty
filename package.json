@@ -1,0 +1,23 @@
+{
+  "name": "fancybeauty",
+  "version": "1.0.0",
+  "description": "Beauty shop website",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joseph-Njuguna/fancybeauty.git"
+  },
+  "author": "JNdungu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joseph-Njuguna/fancybeauty/issues"
+  },
+  "homepage": "https://github.com/Joseph-Njuguna/fancybeauty#readme"
+}
